@@ -40,13 +40,13 @@ if let number: Any? = Int(numericalString) {
 
 //: ### Exercise 4
 //: The class UIViewController has a property called tabBarController.  The tabBarController property is an optional of type UITabBarController?. The tabBarController itself holds a tabBar as a property. Complete the code below by filling in the appropriate use of optional chaining to access the tab bar property.
-//var viewController = UIViewController()
-//if let tabBar = viewController.tabBarController.tabBar {
-////TODO: Optional chaining here {
-//    print("Here's the \(tabBar!) bar.")
-//} else {
-//    print("No tab bar controller found.")
-//}
+var viewController = UIViewController()
+if let tabBar = viewController.tabBarController {
+//TODO: Optional chaining here {
+    print("Here's the \(tabBar) bar.")
+} else {
+    print("No tab bar controller found.")
+}
 //: ### Exercise 5
 //: Below is a dictionary of paintings and artists.
 //:
@@ -66,13 +66,13 @@ var anotherViewController = UIViewController()
 var cancelButton: UIBarButtonItem!
 cancelButton = UIBarButtonItem()
 // TODO: Set the width of the cancel button.
-cancelButton.width  
+cancelButton.width
 //: ### Exercise 7
 //: The class UIViewController has a property called parent.  The parent property is an optional of type UIViewController?. We can't always be sure that a given view controller has a parent view controller.  Safely unwrap the parent property below using if let.
 var childViewController = UIViewController()
 // TODO: Safely unwrap childViewController.parent
 if let parent = childViewController.parent {
-    print("view controller has a parent view controller.")
+    print("view controller has a \(parent) view controller.")
 } else {
     print("null");
 }
